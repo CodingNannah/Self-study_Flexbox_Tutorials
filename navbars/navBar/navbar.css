@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    /* if nav vertical not horizontal; fix:
+    flex-direction: row !important */
+}
+
+.container li {
+    flex: 1;
+    /* remove dots from nav li items: */
+    list-style-type: none;
+}
+
+@media all and (max-width: 600px) {
+    .container {
+        flex-wrap: wrap;
+    }
+    .container li {
+        flex-basis: 50%;
+    }
+}
+
+@media all and (max-width: 400px) {  
+    .container li {
+        flex-basis: 100%;
+    }
+    /* flex items have a default value of 0; anything more is placed after the rest */
+    .search {
+        order: 1;
+    }
+}

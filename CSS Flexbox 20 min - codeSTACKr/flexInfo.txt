@@ -1,0 +1,79 @@
+SEO HTML setup:
+    Main
+    Left Aside
+    Right Aside
+
+Container Properties
+    Flexbox is set up on a two-axis system:
+        Main & Cross
+    
+    Main axis is the default horizontal
+        flex-start is left
+        justify-content operates on main axis
+            by default is flex-start
+        
+    Cross axis is default vertical
+        flex-start is the top
+        align-items operates on cross axis
+            by default is stretch
+            centers items to one another
+
+    Min REQ for Container:
+        justify-content
+        align-items
+
+    Flex-wrap
+        default is no-wrap
+        turned on (wrap) requires align-content & height
+
+    Align-content
+        aligns the group to the container
+
+    Flex-direction
+        row by default
+        really only use row or column
+        when column:
+            requires height
+            Main axis is vertical
+            Cross axis is horizontal
+    
+    Flex-flow
+        combo of flex-direction & flex-wrap
+        takes TWO, ex: column wrap
+        remove "flex-direction" & "flex-wrap"
+
+
+Item Properties
+    To flexbox-item:
+    Flex-basis
+        the starting point of items' width
+        remove "width"
+
+    To individ items:
+    Flex-grow
+        activates when above the item width
+        flex-grow: 1
+            grows by 1
+            distributes avail space at 1:1 ratio
+            if applied to all items --> evenly grows by 1 to fit avail space
+        flex-grow: 2
+            distributes avail space at 2:1 ratio
+
+    Flex-shrink: 1 = grows by 1
+        activates when below the item width
+        flex-shrink: 1
+            shrinks by 1
+
+    When using flex-basis, flex-grow, flex-shrink:
+        use flex in each child
+        flex: [grow] [shrink] [basis] 
+        examples:
+        flex: 1 1 15%;
+        flex: 5 5 25%;
+
+    Align-self
+        requires height in container
+
+    Order
+        changes the order of items
+
